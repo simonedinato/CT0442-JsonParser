@@ -1,14 +1,12 @@
 # CT0442-JsonParserProject
 This repository is related to the University course CT0442: "Programming and laboratory". A basic requirement to pass the course was to do a project assigned by the professor in the specifications he presented to us.
 
-# JSON Parser University Project
-
 This project provides a JSON parser implemented in C++ using the following files:
 
 - `json.hpp`: Header file containing the `json` class definition and related functions.
 - `json.cpp`: Source file containing the implementation of the `json` class and related functions.
 
-## General Description
+## Description
 
 The JSON parser is designed to parse and manipulate JSON data in C++. It provides a `json` class with various methods for handling different JSON data types, such as null, boolean, number, string, list, and dictionary.
 
@@ -16,8 +14,8 @@ The JSON parser is designed to parse and manipulate JSON data in C++. It provide
 
 `json.cpp` contains the implementation of the `json` class methods and operators defined in `json.hpp`. It includes functions for:
 
-- Parsing JSON data from a string.
-- Outputting JSON data to a string.
+- Parsing JSON data from a JSON file.
+- Outputting JSON data to a JSON file.
 - Handling different JSON data types (null, boolean, number, string, list, and dictionary).
 
 ## Structure of json.cpp
