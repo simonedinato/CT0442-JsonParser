@@ -10,7 +10,7 @@ This project provides a JSON parser implemented in C++ using the following files
 
 The JSON parser is designed to parse and manipulate JSON data in C++. It provides a `json` class with various methods for handling different JSON data types, such as null, boolean, number, string, list, and dictionary.
 
-## Features of json.cpp
+## Features
 
 `json.cpp` contains the implementation of the `json` class methods and operators defined in `json.hpp`. It includes functions for:
 
@@ -18,7 +18,7 @@ The JSON parser is designed to parse and manipulate JSON data in C++. It provide
 - Outputting JSON data to a JSON file.
 - Handling different JSON data types (null, boolean, number, string, list, and dictionary).
 
-## Structure of json.cpp
+## Structure
 
 The `json.cpp` file is organized as follows:
 
@@ -27,7 +27,7 @@ The `json.cpp` file is organized as follows:
 3. Iterators for lists and dictionaries, such as `begin_list`, `end_list`, `begin_dictionary`, and `end_dictionary`.
 4. Overloaded input and output stream operators for reading and writing JSON data.
 
-## Description of the "parse" Function
+## Parse
 
 The `parse` function in `json.cpp` takes a string as input and returns a `json` object [1]. It checks the input string for different JSON data types (such as lists, dictionaries, strings, numbers, booleans, and null values) and sets the corresponding value in the `json` object. The function uses a series of conditional statements and loops to identify and process each JSON data type.
 
