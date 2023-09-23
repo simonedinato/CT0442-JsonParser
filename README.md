@@ -29,8 +29,12 @@ The `json.cpp` file is organized as follows:
 
 ## Description of the "parse" Function
 
-The `parse` function in `json.cpp` takes a string as input and returns a `json` object. It checks the input string for different JSON data types and sets the corresponding value in the `json` object. If the input string is empty, it throws a `json_exception` with a message indicating that the input is empty or incorrect [1].
+The `parse` function in `json.cpp` takes a string as input and returns a `json` object [1]. It checks the input string for different JSON data types (such as lists, dictionaries, strings, numbers, booleans, and null values) and sets the corresponding value in the `json` object. The function uses a series of conditional statements and loops to identify and process each JSON data type.
 
-## Exception for Debugging
+For example, when parsing a list, the function iterates through the input string and checks for opening and closing brackets, as well as nested lists and dictionaries. If the input string is not well-formed (e.g., a list is not closed or a string is not enclosed in double quotes), the function throws a `json_exception` with a specific error message.
 
-The `json_exception` struct is defined in `json.hpp` and is used to throw exceptions when an error occurs during parsing or other operations. The `json_exception` struct contains a `msg` field, which is a string that stores the error message [2]. This exception can be used to debug the code or the input files by providing more information about the error encountered.
+## Exceptions for Debugging
+
+The `json_exception` struct is defined in `json.hpp` and is used to throw exceptions when an error occurs during parsing or other operations. The `json_exception` struct contains a `msg` field, which is a string that stores the error message. This exception can be used to debug the code or the input files by providing more information about the error encountered.
+
+For instance, when the `parse` function encounters an ill-formed list or dictionary, it throws a `json_exception` with a message indicating the specific issue, such as "La lista non è ben formata - Dizionario non chiuso - parse" or "La lista non è ben formata - Stringa non chiusa - parse". By catching and handling these exceptions in your code, you can identify and fix issues with the input JSON data or the parser implementation.
